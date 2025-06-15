@@ -30,10 +30,10 @@
     <!-- Header Section -->
     <header class="header">
         <div class="header-bg-slideshow">
-            <img src="c:/Users/itrev/Downloads/IMG_5961.jpg" class="header-bg-slide active" alt="Car Wash 1">
-            <img src="c:/Users/itrev/Downloads/IMG_6020.jpg" class="header-bg-slide" alt="Car Wash 2">
-            <img src="c:/Users/itrev/Downloads/IMG_6023.jpg" class="header-bg-slide" alt="Car Wash 3">
-            <img src="c:/Users/itrev/Downloads/IMG_6066.jpg" class="header-bg-slide" alt="Car Wash 4">
+            <img src="assets/truckfoam.jpg" class="header-bg-slide active" alt="truckfoam">
+            <img src="assets/bmwfoam.jpg" class="header-bg-slide" alt="bmwfoam">
+            <img src="assets/bmwfoam2.jpg" class="header-bg-slide" alt="bmwfoam2">
+            <img src="assets/full-detail.JPG" class="header-bg-slide" alt="full-detail">
             <img src="c:/Users/itrev/Downloads/IMG_5767 (1).jpg" class="header-bg-slide" alt="Car Wash 5">
             <img src="c:/Users/itrev/Downloads/74787487687__18A898DE-91CC-4F80-81FC-6DB56A701689.jpg" class="header-bg-slide" alt="Car Wash 6">
         </div>
@@ -85,19 +85,19 @@
       <div class="services-container" style="max-width: 1100px; margin: 0 auto; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
         <div class="service-card" style="background: #fff; border-radius: 18px; box-shadow: 0 2px 12px rgba(30,40,60,0.08); flex: 1 1 340px; max-width: 360px; display: flex; flex-direction: column; align-items: center; padding: 2rem 1.2rem;">
           <div style="display: flex; gap: 2%; width: 100%; justify-content: center; margin-bottom: 1.2rem;">
-            <img src="c:/Users/itrev/Downloads/IMG_6037.jpg" alt="Detailing 1" style="width:49%;height:340px;object-fit:cover;border-radius:10px;">
-            <img src="c:/Users/itrev/Downloads/IMG_6020.jpg" alt="Detailing 2" style="width:49%;height:340px;object-fit:cover;border-radius:10px;">
+            <img src="assets/porscescrub.jpg" alt="porschescrub" style="width:49%;height:340px;object-fit:cover;border-radius:10px;">
+            <img src="assets/porschewash.jpg" alt="porschewash" style="width:49%;height:340px;object-fit:cover;border-radius:10px;">
           </div>
           <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.7rem; color: #23262f;">Full In & Out Detail</h3>
           <p style="color: #555; font-size: 1.05rem; text-align: center;">Complete interior and exterior deep cleaning for a showroom finish. Includes seats, carpets, paint, wheels, and more.</p>
         </div>
         <div class="service-card" style="background: #fff; border-radius: 18px; box-shadow: 0 2px 12px rgba(30,40,60,0.08); flex: 1 1 300px; max-width: 340px; display: flex; flex-direction: column; align-items: center; padding: 2rem 1.2rem;">
-          <img src="c:/Users/itrev/Downloads/IMG_6022.jpg" alt="Ceramic Coating" style="width:100%;height:340px;object-fit:cover;border-radius:12px;margin-bottom:1.2rem;">
+          <img src="assets/porscheceramic.jpg" alt="porscheceramic" style="width:100%;height:340px;object-fit:cover;border-radius:12px;margin-bottom:1.2rem;">
           <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.7rem; color: #23262f;">Ceramic Coating</h3>
           <p style="color: #555; font-size: 1.05rem; text-align: center;">Long-lasting protection and extreme gloss for your vehicle's paint. Repels water, dirt, and contaminants.</p>
         </div>
         <div class="service-card" style="background: #fff; border-radius: 18px; box-shadow: 0 2px 12px rgba(30,40,60,0.08); flex: 1 1 300px; max-width: 340px; display: flex; flex-direction: column; align-items: center; padding: 2rem 1.2rem;">
-          <img src="c:/Users/itrev/Downloads/IMG_6031.jpg" alt="Paint Correction" style="width:100%;height:340px;object-fit:cover;border-radius:12px;margin-bottom:1.2rem;">
+          <img src="assets/boatpolish.jpg" alt="boatpolish" style="width:100%;height:340px;object-fit:cover;border-radius:12px;margin-bottom:1.2rem;">
           <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.7rem; color: #23262f;">Paint Correction</h3>
           <p style="color: #555; font-size: 1.05rem; text-align: center;">Removes scratches, swirls, and imperfections to restore your paint's original shine and clarity.</p>
         </div>
@@ -184,9 +184,8 @@
             <form id="booking-form" class="booking-form">
                 <div class="form-row">
                     <div class="form-group">
-                        <span style="display:block;color:#222;font-size:0.92rem;margin-bottom:0.2rem;">Select to get free quote</span>
-                        <label for="vehicle-type" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Vehicle Type</label>
-                        <select id="vehicle-type" required>
+                        <label for="vehicle-type">Vehicle Type <span style="color:#e11d48;">*</span></label>
+                        <select id="vehicle-type" required title="Select vehicle type">
                             <option value="">Select vehicle type</option>
                             <option value="coupe">Coupe</option>
                             <option value="sedan">Sedan</option>
@@ -196,7 +195,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <select id="vehicle-brand" name="vehicle-brand" style="padding-left:2.2rem;margin-bottom:0.5rem;">
+                        <label for="vehicle-brand">Vehicle Brand</label>
+                        <select id="vehicle-brand" name="vehicle-brand" title="Select vehicle brand">
                             <option value="">Select Vehicle Brand (Optional)</option>
                             <option value="Toyota">Toyota</option>
                             <option value="Honda">Honda</option>
@@ -210,19 +210,24 @@
                             <option value="Volkswagen">Volkswagen</option>
                             <option value="Other">Other</option>
                         </select>
-                        <select id="vehicle-model" name="vehicle-model" style="padding-left:2.2rem;" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle-model">Vehicle Model</label>
+                        <select id="vehicle-model" name="vehicle-model" title="Select vehicle model" disabled>
                             <option value="">Select Model (Optional)</option>
                         </select>
                     </div>
                 </div>
-                <div class="form-row" style="flex-direction: column; gap: 1rem;">
+                <div class="form-row">
                     <div class="form-group">
+                        <label for="date-picker">Date <span style="color:#e11d48;">*</span></label>
                         <span class="input-icon"><i class="fas fa-calendar-alt"></i></span>
                         <input type="text" id="date-picker" placeholder="Date" required>
                     </div>
                     <div class="form-group">
+                        <label for="time-picker">Time <span style="color:#e11d48;">*</span></label>
                         <span class="input-icon"><i class="fas fa-clock"></i></span>
-                        <select id="time-picker" required>
+                        <select id="time-picker" required title="Select time">
                             <option value="">Time (AM/PM)</option>
                             <option value="07:00 AM">7:00 AM</option>
                             <option value="07:30 AM">7:30 AM</option>
@@ -254,7 +259,7 @@
                 <div class="service-options">
                     <label class="service-option">
                         <input type="checkbox" class="service-checkbox" value="ultimate">
-                        <span class="service-name">full-detail</span>
+                        <span class="service-name">Full Detail</span>
                         <span class="service-desc">Interior & Exterior Deep Clean</span>
                     </label>
                     <label class="service-option">

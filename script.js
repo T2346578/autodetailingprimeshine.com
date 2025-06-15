@@ -70,25 +70,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Testimonials Data (now 9 reviews)
     const testimonials = [
         {
-            name: "John Smith",
+            name: "Paul",
             rating: 5,
-            comment: "Best car detailing service I've ever used! My car looks brand new.",
+            comment: "First time using Prime Shine. Trevor was polite and honest and incredibly hard working. My car looks brand new!!!! His attention to detail is impeccable. I will continue to call Derek in the future, when I get my car out of winter storage. Great job 👏 well done and keep up the great work 👍.",
             image: "assets/testimonial1.jpg",
-            carImage: "assets/review-car1.jpg"
+            carImages: [
+                "assets/redcivic1.jpg",
+                "assets/redcivic2.jpg",
+                "assets/redcivic3.jpg",
+            ]
         },
         {
-            name: "Sarah Johnson",
+            name: "Michael Iriotakis",
             rating: 5,
-            comment: "Professional service and amazing results. Will definitely use again!",
-            image: "assets/testimonial2.jpg",
-            carImage: "assets/review-car2.jpg"
+            comment: "I recently hired Trevor to do a 2 stage paint correction with a ceramic coating on my newly purchased black car and now my car looks amazing. I was very impressed by Trevor's professionalism and how detail oriented he was while he worked on my car. This guy clearly knows what he's doing, and I'll definitely be calling him again with any of my auto detailing needs. Give him a call, won't be disappointment. Thank you Trevor for making my car look amazing!",
+            image: "assets/black-mercedes.jpg",
+            carImages: [
+                "assets/blackmercedes.jpg"
+            ]
         },
         {
-            name: "Mike Brown",
+            name: "Eric",
             rating: 5,
             comment: "They came to my location and did an outstanding job. Very convenient!",
             image: "assets/testimonial3.jpg",
-            carImage: "assets/review-car3.jpg"
+            carImage: "assets/redmiata.jpg"
         },
         {
             name: "Emily White",
@@ -142,10 +148,27 @@ document.addEventListener('DOMContentLoaded', function() {
     function createTestimonialCard(testimonial) {
         const card = document.createElement('div');
         card.className = 'testimonial-card';
+        // Expandable comment logic
+        const shortComment = testimonial.comment.length > 80 ? testimonial.comment.slice(0, 80) + '...' : testimonial.comment;
+        const isExpandable = testimonial.comment.length > 80;
+        // Car image slider logic (only for Paul)
+        let carImageSlider = '';
+        if (testimonial.carImages && testimonial.carImages.length > 0) {
+            carImageSlider = `
+                <div class="testimonial-slider-wrapper">
+                    <img src="${testimonial.carImages[0]}" alt="Client's Car" class="intro-image slider-img" style="width:100%;border-radius:10px;object-fit:cover;max-height:220px;">
+                    <div class="slider-controls" style="display:flex;justify-content:center;gap:0.5rem;margin-top:0.5rem;">
+                        ${testimonial.carImages.map((img, idx) => `<span class="slider-dot" data-idx="${idx}" style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3b82f6;opacity:${idx===0?1:0.3};cursor:pointer;"></span>`).join('')}
+                    </div>
+                </div>
+            `;
+        } else {
+            carImageSlider = `<img src="${testimonial.carImage}" alt="Client's Car" class="intro-image">`;
+        }
         card.innerHTML = `
             <div class="testimonial-content">
                 <div class="testimonial-image-wrapper" style="position:relative;">
-                    <img src="${testimonial.carImage}" alt="Client's Car" class="intro-image">
+                    ${carImageSlider}
                     <div class="review-badge right">
                       <div class="review-badge-row">
                         <img src="${testimonial.image}" alt="${testimonial.name}" class="review-avatar">
@@ -158,9 +181,40 @@ document.addEventListener('DOMContentLoaded', function() {
                       </div>
                     </div>
                 </div>
-                <p class="comment">${testimonial.comment}</p>
+                <p class="comment" style="margin-top:1rem;">
+                    <span class="comment-text">${shortComment}</span>
+                    ${isExpandable ? `<button class="expand-comment-btn" style="background:none;border:none;color:#3b82f6;font-size:1.1rem;cursor:pointer;vertical-align:middle;">▼</button>` : ''}
+                </p>
             </div>
         `;
+        // Expand/collapse logic
+        if (isExpandable) {
+            const btn = card.querySelector('.expand-comment-btn');
+            const commentText = card.querySelector('.comment-text');
+            let expanded = false;
+            btn.addEventListener('click', function() {
+                expanded = !expanded;
+                if (expanded) {
+                    commentText.textContent = testimonial.comment;
+                    btn.textContent = '▲';
+                } else {
+                    commentText.textContent = shortComment;
+                    btn.textContent = '▼';
+                }
+            });
+        }
+        // Slider logic for car images (only for Paul)
+        if (testimonial.carImages && testimonial.carImages.length > 0) {
+            const sliderImg = card.querySelector('.slider-img');
+            const dots = card.querySelectorAll('.slider-dot');
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const idx = parseInt(dot.getAttribute('data-idx'));
+                    sliderImg.src = testimonial.carImages[idx];
+                    dots.forEach((d, i) => d.style.opacity = i === idx ? '1' : '0.3');
+                });
+            });
+        }
         return card;
     }
 
