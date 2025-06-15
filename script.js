@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Eric",
             rating: 5,
             comment: "They came to my location and did an outstanding job. Very convenient!",
-            image: "assets/testimonial3.jpg",
-            carImage: "assets/redmiata.jpg"
+            image: "assets/testimonial3.JPG",
+            carImage: "assets/redmiata.JPG"
         },
         {
             name: "Emily White",
