@@ -73,20 +73,20 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Paul",
             rating: 5,
             comment: "First time using Prime Shine. Trevor was polite and honest and incredibly hard working. My car looks brand new!!!! His attention to detail is impeccable. I will continue to call Derek in the future, when I get my car out of winter storage. Great job 👏 well done and keep up the great work 👍.",
-            image: "assets/testimonial1.jpg",
+            image: "assets/testimonial1.JPG",
             carImages: [
-                "assets/redcivic1.jpg",
-                "assets/redcivic2.jpg",
-                "assets/redcivic3.jpg",
+                "assets/redcivic1.JPG",
+                "assets/redcivic2.JPG",
+                "assets/redcivic3.JPG",
             ]
         },
         {
             name: "Michael Iriotakis",
             rating: 5,
             comment: "I recently hired Trevor to do a 2 stage paint correction with a ceramic coating on my newly purchased black car and now my car looks amazing. I was very impressed by Trevor's professionalism and how detail oriented he was while he worked on my car. This guy clearly knows what he's doing, and I'll definitely be calling him again with any of my auto detailing needs. Give him a call, won't be disappointment. Thank you Trevor for making my car look amazing!",
-            image: "assets/black-mercedes.jpg",
+            image: "assets/black-mercedes.JPG",
             carImages: [
-                "assets/blackmercedes.jpg"
+                "assets/blackmercedes.JPG"
             ]
         },
         {
