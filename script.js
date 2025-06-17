@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
             comment: "I recently hired Trevor to do a 2 stage paint correction with a ceramic coating on my newly purchased black car and now my car looks amazing. I was very impressed by Trevor's professionalism and how detail oriented he was while he worked on my car. This guy clearly knows what he's doing, and I'll definitely be calling him again with any of my auto detailing needs. Give him a call, won't be disappointment. Thank you Trevor for making my car look amazing!",
             image: "assets/michaletest.png",
             carImages: [
-                "assets/blackmercedes.jpg"
+                "assets/blackmercedes.JPG"
             ]
         },
         {
