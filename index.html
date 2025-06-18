@@ -11,17 +11,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrimeShine Auto Detailing - Premium Mobile Car Detailing in the GTA</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-<!-- Or if it's in a folder: -->
-<!-- <link rel="icon" href="/images/favicon.ico" type="image/x-icon"> -->
-
-    <link rel="icon" href="favicon.ico" type="assets/logo.png">
-<!-- Or if it's in a folder: -->
-<!-- <link rel="icon" href="/images/favicon.ico" type="assets/logo.png"> -->
-
+    
     <!-- Favicon and Logo -->
-    <link rel="icon" type="image/png" href="assets/logo">
-    <link rel="apple-touch-icon" href="assets/logo">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
     <meta name="theme-color" content="#3b82f6">
     
     <!-- Structured Data for Organization -->
@@ -42,6 +35,92 @@
         "@type": "ContactPoint",
         "telephone": "647-637-9216",
         "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://www.instagram.com/primeshinee_/"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "PrimeShine Auto Detailing",
+      "image": "https://autodetailingprimeshine.com/assets/logo.png",
+      "logo": "https://autodetailingprimeshine.com/assets/logo.png",
+      "description": "Professional mobile car detailing services in the GTA",
+      "url": "https://autodetailingprimeshine.com",
+      "telephone": "647-637-9216",
+      "email": "lprimeshinel@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "GTA",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "43.6532",
+        "longitude": "-79.3832"
+      },
+      "openingHours": "Mo-Sa 08:00-20:00",
+      "priceRange": "$$",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "43.6532",
+          "longitude": "-79.3832"
+        },
+        "geoRadius": "50000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Auto Detailing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Full Detail",
+              "description": "Complete interior and exterior deep cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ceramic Coating",
+              "description": "Long-lasting protection and extreme gloss"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Paint Correction",
+              "description": "Removes scratches and swirls"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Structured Data for Website -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PrimeShine Auto Detailing",
+      "url": "https://autodetailingprimeshine.com",
+      "logo": "https://autodetailingprimeshine.com/assets/logo.png",
+      "description": "Professional mobile car detailing services in the GTA",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://autodetailingprimeshine.com/services.html",
+        "query-input": "required name=search_term_string"
       }
     }
     </script>
@@ -52,6 +131,20 @@
     <meta property="og:image:width" content="512">
     <meta property="og:image:height" content="512">
     <meta property="og:image:alt" content="PrimeShine Auto Detailing Logo">
+    
+    <!-- Additional logo meta tags for better Google visibility -->
+    <meta name="logo" content="https://autodetailingprimeshine.com/assets/logo.png">
+    <meta name="image" content="https://autodetailingprimeshine.com/assets/logo.png">
+    <meta name="thumbnail" content="https://autodetailingprimeshine.com/assets/logo.png">
+    
+    <!-- Google-specific logo tags -->
+    <meta name="google-site-verification" content="your-verification-code">
+    <meta name="google" content="notranslate">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/logo.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/logo.png">
     
     <meta name="description" content="Professional mobile car detailing services in the GTA. Expert interior cleaning, exterior detailing, paint correction & ceramic coating. Book your free quote today!">
     <meta name="keywords" content="car detailing, mobile car wash, auto detailing, paint correction, ceramic coating, GTA car detailing, professional car detailing">
@@ -82,53 +175,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <style>
-        .service-category {
-            margin-bottom: 2rem;
-            padding: 1rem;
-            background: #1e293b;
-            border-radius: 12px;
-            border: 1px solid #334155;
-        }
-        
-        .category-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #f1f5f9;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #3b82f6;
-        }
-        
-        .category-options {
-            display: grid;
-            gap: 1rem;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
-        
-        .service-option {
-            background: #334155;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: 1px solid #475569;
-        }
-        
-        .service-option:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            background: #475569;
-        }
-        
-        .service-benefits {
-            display: block;
-            font-size: 0.9rem;
-            color: #3b82f6;
-            margin-top: 0.5rem;
-            font-weight: 500;
-        }
-    </style>
     <!-- Facebook Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
